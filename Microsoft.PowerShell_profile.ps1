@@ -10,9 +10,9 @@ function Sudo (
 	[string[]]$ArgumentList
 ) {
 	if($ArgumentList) {
-		Start-Process $Program -Verb RunAs -ArgumentList $ArgumentList
+		Start-Process $Program -WorkingDirectory . -Verb RunAs -ArgumentList $ArgumentList
 
 		return
 	}
-	Start-Process $Program -Verb RunAs
+	Start-Process $Program -WorkingDirectory . -Verb RunAs
 }
