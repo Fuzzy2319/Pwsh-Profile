@@ -1,8 +1,9 @@
 # https://github.com/JanDeDobbeleer/oh-my-posh
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\ys.omp.json" | Invoke-Expression
-oh-my-posh upgrade
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
 # https://github.com/devblackops/Terminal-Icons
 Import-Module -Name Terminal-Icons
+cls
 
 function Sudo (
 	[Parameter(Mandatory)]
